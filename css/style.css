@@ -446,132 +446,242 @@
 #clients {
   padding-top: 5rem;
 }
-#clients .clients__main {
+#clients .container .slick-dots {
+  position: absolute;
+  bottom: 116px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  padding-left: 32.5rem;
+}
+#clients .container .slick-dots li {
+  list-style-type: none;
+}
+#clients .container .slick-dots li a {
+  text-decoration: none;
+  color: #000000;
+}
+#clients .container .clients__main {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10rem;
 }
-#clients .clients__main .clients__image img {
+#clients .container .clients__main .clients__image img {
   width: 22.813rem;
   height: 31.938rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#clients .clients__main .clients__content h3 {
+#clients .container .clients__main .clients__content h3 {
   font-size: 48px;
   font-weight: 700;
 }
-#clients .clients__main .clients__content h3 span {
+#clients .container .clients__main .clients__content h3 span {
   color: white;
   text-shadow: 1px 1px 5px #707070;
 }
-#clients .clients__main .clients__content p {
+#clients .container .clients__main .clients__content p {
   color: #555F64;
   font-size: 26px;
   width: 29.063rem;
   padding-top: 1.5rem;
 }
-#clients .clients__main .clients__content h4 {
+#clients .container .clients__main .clients__content h4 {
   color: #000000;
   font-size: 16px;
 }
-#clients .clients__main .clients__content .clients__number p {
+#clients .container .clients__main .clients__content .clients__number p {
   padding-top: 10rem;
   position: relative;
 }
 
 #faq {
-  padding-bottom: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 #faq h2 {
   font-size: 48px;
   font-weight: 700;
+  padding-left: 1rem;
 }
 #faq h2 span {
   color: white;
   text-shadow: 1px 1px 5px #707070;
 }
 #faq .faq__main {
-  display: flex;
-  justify-content: space-between;
   padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
-#faq .faq__main .faq__line1 p {
+#faq .faq__main .faq__tab1 {
+  border-bottom: 2px solid gray;
+}
+#faq .faq__main .faq__tab1 label {
+  color: #000000;
+  padding: 12px 20px;
+  display: block;
+  cursor: pointer;
   width: 21.563rem;
   font-size: 24px;
   font-weight: 500;
   position: relative;
+  padding-bottom: 3.5rem;
+  padding-top: 2.5rem;
 }
-#faq .faq__main .faq__line1 p::before {
+#faq .faq__main .faq__tab1 label::before {
   content: "";
   background-color: rgb(225, 75, 50);
   width: 0.15rem;
   height: 4rem;
   position: absolute;
   left: -1rem;
-  top: 0.7rem;
+  top: 3rem;
 }
-#faq .faq__main .faq__line2 p {
+#faq .faq__main .faq__tab1 label p {
   font-size: 24px;
   color: #000000;
-  width: 37.313rem;
+  width: 78.313rem;
+  padding-left: 48rem;
+  margin-top: -8rem;
 }
-#faq .faq__line3 {
-  padding-top: 5rem;
+#faq .faq__main .faq__tab1 .faq__content {
+  max-height: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-color: aquamarine;
+  width: 33.5rem;
+  position: relative;
+  left: 47rem;
+  top: -9rem;
 }
-#faq .faq__line3 p {
+#faq .faq__main .faq__tab1 .faq__content p {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 33rem;
+  font-size: 18px;
+  padding-left: 1rem;
+  line-height: 2rem;
+  color: gray;
+}
+#faq .faq__main .faq__tab1 .accordian-toggle:checked ~ .faq__content {
+  max-height: 100vh;
+}
+#faq .faq__main .faq__tab1 .accordian-toggle {
+  display: none;
+}
+#faq .faq__main .faq__tab2 {
+  border-bottom: 2px solid gray;
+}
+#faq .faq__main .faq__tab2 label {
   color: #000000;
+  padding: 12px 20px;
+  display: block;
+  cursor: pointer;
+  width: 21.563rem;
   font-size: 24px;
-  width: 21.75rem;
   font-weight: 500;
   position: relative;
+  padding-bottom: 3.5rem;
+  padding-top: 2.5rem;
 }
-#faq .faq__line3 p::before {
-  content: "";
-  background-color: rgb(225, 75, 50);
-  width: 4rem;
-  height: 0.1rem;
-  position: absolute;
-  left: -4.5rem;
-  top: 1.05rem;
+#faq .faq__main .faq__tab2 .faq__content {
+  max-height: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-color: green;
 }
-#faq .faq__line4 {
-  padding-top: 5rem;
-}
-#faq .faq__line4 p {
+#faq .faq__main .faq__tab2 .faq__content p {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 33rem;
+  font-size: 18px;
+  padding-left: 1rem;
+  line-height: 2rem;
   color: #000000;
+}
+#faq .faq__main .faq__tab2 .accordian-toggle:checked ~ .faq__content {
+  max-height: 100vh;
+}
+#faq .faq__main .faq__tab2 .accordian-toggle {
+  display: none;
+}
+#faq .faq__main .faq__tab3 {
+  border-bottom: 2px solid gray;
+}
+#faq .faq__main .faq__tab3 label {
+  color: #000000;
+  padding: 12px 20px;
+  display: block;
+  cursor: pointer;
+  width: 23rem;
   font-size: 24px;
-  width: 21.75rem;
   font-weight: 500;
   position: relative;
+  padding-bottom: 3.5rem;
+  padding-top: 2.5rem;
 }
-#faq .faq__line4 p::before {
-  content: "";
-  background-color: rgb(225, 75, 50);
-  width: 4rem;
-  height: 0.1rem;
-  position: absolute;
-  left: -4.5rem;
-  top: 1.05rem;
+#faq .faq__main .faq__tab3 .faq__content {
+  max-height: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-color: yellowgreen;
+  width: 33.5rem;
+  position: relative;
+  left: 47rem;
+  top: -8rem;
 }
-#faq .faq__line5 {
-  padding-top: 5rem;
+#faq .faq__main .faq__tab3 .faq__content p {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 33rem;
+  font-size: 18px;
+  padding-left: 1rem;
+  line-height: 2rem;
+  color: green;
 }
-#faq .faq__line5 p {
+#faq .faq__main .faq__tab3 .accordian-toggle:checked ~ .faq__content {
+  max-height: 100vh;
+}
+#faq .faq__main .faq__tab3 .accordian-toggle {
+  display: none;
+}
+#faq .faq__main .faq__tab4 {
+  border-bottom: 2px solid gray;
+}
+#faq .faq__main .faq__tab4 label {
   color: #000000;
+  padding: 12px 20px;
+  display: block;
+  cursor: pointer;
+  width: 24rem;
   font-size: 24px;
-  width: 21.75rem;
   font-weight: 500;
   position: relative;
+  padding-bottom: 3.5rem;
+  padding-top: 2.5rem;
 }
-#faq .faq__line5 p::before {
-  content: "";
-  background-color: rgb(225, 75, 50);
-  width: 4rem;
-  height: 0.1rem;
-  position: absolute;
-  left: -4.5rem;
-  top: 1.05rem;
+#faq .faq__main .faq__tab4 .faq__content {
+  max-height: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-color: yellow;
+}
+#faq .faq__main .faq__tab4 .faq__content p {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 33rem;
+  font-size: 18px;
+  padding-left: 1rem;
+  line-height: 2rem;
+  color: black;
+}
+#faq .faq__main .faq__tab4 .accordian-toggle:checked ~ .faq__content {
+  max-height: 100vh;
+}
+#faq .faq__main .faq__tab4 .accordian-toggle {
+  display: none;
 }
 
 #drupal {
@@ -741,77 +851,109 @@
   top: 4.25rem;
 }
 
-#contact {
-  background-color: #232526;
+#oslform {
+  background-color: black;
+  padding-bottom: 5rem;
+}
+#oslform .container {
   padding-top: 7rem;
-  padding-bottom: 7rem;
-  padding-left: 25rem;
 }
-#contact .contact__heading h3 {
-  font-size: 16px;
-  font-weight: 800;
+#oslform .container h3 {
   color: #FFFFFF;
+  padding-left: 8.5rem;
+  position: relative;
+  z-index: 1;
 }
-#contact .contact__heading h2 {
-  font-size: 48px;
-  width: 61.063rem;
-  color: #FFFFFF;
-  font-weight: 700;
+#oslform .container h3::before {
+  content: "";
+  background-color: #E14B32;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  border-radius: 50%;
+  left: 7rem;
+  top: -2.5rem;
+  z-index: -1;
 }
-#contact .contact__heading h2 span {
+#oslform .container h1 {
+  font-size: 4rem;
+  padding-left: 8.5rem;
+  color: white;
+}
+#oslform .container h1 span {
   color: black;
-  text-shadow: 1px 1px 5px white;
-  font-weight: 700;
+  text-shadow: 0px 0px 3.5px #ddd;
 }
-#contact #sform {
-  padding-top: 3.5rem;
+#oslform .container form .oslform__textarea {
+  padding-left: 8.5rem;
+  padding-top: 5rem;
 }
-#contact #sform textarea {
+#oslform .container form .oslform__textarea textarea {
   background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
 }
-#contact #sform .sform__tags {
+#oslform .container form .oslform__input {
   display: flex;
-  padding-top: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
-#contact #sform .sform__tags #fname {
-  height: 3rem;
-  background: transparent;
-  color: white;
-}
-#contact #sform .sform__tags .sform__phone {
-  padding-left: 8rem;
-}
-#contact #sform .sform__tags .sform__phone #fphone {
-  height: 3rem;
-  background: transparent;
-  color: white;
-}
-#contact #sform .sform__tags .sform__email {
+#oslform .container form .oslform__input .oslform__name {
   padding-left: 8.5rem;
 }
-#contact #sform .sform__tags .sform__email #femail {
+#oslform .container form .oslform__input .oslform__name input {
+  height: 3.75rem;
+  width: 18.75rem;
+  background-color: transparent;
+  font-size: 18px;
+  color: white;
+}
+#oslform .container form .oslform__input .oslform__phone {
+  padding-left: 4.5rem;
+}
+#oslform .container form .oslform__input .oslform__phone input {
+  height: 3.75rem;
+  width: 18.75rem;
+  background-color: transparent;
+  font-size: 18px;
+  color: white;
+}
+#oslform .container form .oslform__input .oslform__email {
+  padding-left: 4.5rem;
+}
+#oslform .container form .oslform__input .oslform__email input {
+  height: 3.75rem;
+  width: 18.75rem;
+  background-color: transparent;
+  font-size: 18px;
+  color: white;
+}
+#oslform .container form .oslform__submit {
+  display: flex;
+}
+#oslform .container form .oslform__submit .oslform__checkbox {
+  padding-left: 44.5rem;
+}
+#oslform .container form .oslform__submit .oslform__checkbox label {
+  color: #555F64;
+}
+#oslform .container form .oslform__submit .oslform__fsubmit {
+  padding-left: 8rem;
+}
+#oslform .container form .oslform__submit .oslform__fsubmit #fsubmit {
+  width: 12.5rem;
   height: 3rem;
-  background: transparent;
-  color: white;
-}
-#contact #sform .sform__fcheck {
-  padding-top: 2.5rem;
-  padding-left: 26rem;
-}
-#contact #sform .sform__fcheck label {
-  font-size: 1rem;
-  color: #A5A5A5;
   background-color: transparent;
   color: white;
+  border: 2px solid #555F64;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
 }
-#contact #sform .sform__submit {
-  padding-left: 41rem;
-  margin-top: -1.5rem;
-}
-#contact #sform .sform__submit input {
-  padding: 0.8rem 2rem;
-  background-color: transparent;
-  color: white;
+#oslform .container form .oslform__submit .oslform__fsubmit #fsubmit:hover {
+  background-color: #FAAF41;
+  color: black;
+  transform: translateX(7px);
+  padding: 8px;
 }
 
 #footer .footer__upper {
